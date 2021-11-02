@@ -12,7 +12,7 @@ function setup() {
 
 function keyPressed() {
   if (keyCode == LEFT_ARROW){
-    let mover = new Mover(random(width), random(height), random(5, 30));
+    let mover = new Mover(random(width), random(height), random(5, 10));
     movers.push(mover);
   }
   else if (keyCode == RIGHT_ARROW){

@@ -26,13 +26,13 @@ class Mover {
   show() {
     noStroke();
     fill(250);
-    circle(this.pos.x, this.pos.y, this.m);
+    rect(this.pos.x, this.pos.y, this.m, this.m);
   }
 
   drawOn(canvas) {
-    canvas.fill(random(255), random(255), random(255), 20);
+    canvas.fill(10, random(255), random(255), 20);
     canvas.noStroke();
-    canvas.circle(this.pos.x, this.pos.y, this.m);
+    canvas.rect(this.pos.x, this.pos.y, this.m, this.m);
   }
 
   edges(){
@@ -53,5 +53,4 @@ class Mover {
       this.pos.y = 0;
     }
   }
-
 }
