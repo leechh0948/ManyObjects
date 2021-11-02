@@ -8,9 +8,15 @@ function setup() {
   m = new Mover(50, 50, 10);
   m2 = new Mover(300, 300, 50);
 
-  for (let i = 0; i < 10; i++){
+}
+
+function keyPressed() {
+  if (keyCode == LEFT_ARROW){
     let mover = new Mover(random(width), random(height), random(5, 30));
     movers.push(mover);
+  }
+  else if (keyCode == RIGHT_ARROW){
+    movers.pop();
   }
 }
 
