@@ -24,7 +24,8 @@ class Mover {
   }
 
   show() {
-    fill(0);
+    noStroke();
+    fill(250);
     circle(this.pos.x, this.pos.y, this.m);
   }
 
