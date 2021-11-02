@@ -27,4 +27,30 @@ class Mover {
     fill(0);
     circle(this.pos.x, this.pos.y, this.m);
   }
+
+  drawOn(canvas) {
+    canvas.fill(random(255), random(255), random(255), 20);
+    canvas.noStroke();
+    canvas.circle(this.pos.x, this.pos.y, this.m);
+  }
+
+  edges(){
+    if (this.pos.y > height) {
+      this.vel.y *= -1;
+      this.pos.y = height;
+    }
+    if (this.pos.x > width) {
+      this.vel.x *= -1;
+      this.pos.x = width;
+    }
+    if (this.pos.x < 0){
+      this.vel.x *= -1;
+      this.pos.x = 0;
+    }
+    if (this.pos.y < 0){
+      this.vel.y *= -1;
+      this.pos.y = 0;
+    }
+  }
+
 }
